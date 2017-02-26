@@ -4,29 +4,111 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- attention ici c'est loadé avant le dom, y mettre que l'essentiel -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
 
+<!-- If connexion -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.12/css/uikit.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.12/js/uikit.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.12/js/uikit.min.js"></script> -->
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css" />
+<script src="node_modules/uikit/dist/js/uikit.min.js"></script>
+
+<!-- link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> -->
 <link rel="stylesheet" href="style.css">
 
 <body> 
 
-<div class="uk-child-width-1-2@s" uk-grid>
-    <div>
-        <div class="uk-card uk-card-default uk-card-small uk-card-body">
-            <h3 class="uk-card-title">Small</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-large uk-card-body">
-            <h3 class="uk-card-title">Large</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
+<div class="uk-position-relative">
+    
+    <div class="uk-position-top">
+        <nav class="uk-navbar-container uk-navbar-transparent " uk-navbar>
+            <div class="uk-navbar-center">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#">Active</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
     </div>
 </div>
+
+
+<div class="uk-position-relative">
+    
+    <div class="uk-position-top">
+        <nav class="uk-navbar-container uk-navbar-transparent" id="vertical-menu" uk-navbar>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#">Active2</a></li>
+                    <li><a href="#">Item2</a></li>
+                    <li><a href="#">Item3</a></li>
+                    <li><a href="#">Item4</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<section id="corps">
+
+
+    <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
+        <div>
+            <div class="uk-background-muted uk-padding">Item</div>
+        </div>
+        <div>
+            <div class="uk-background-secondary uk-padding uk-light">Item</div>
+        </div>
+        <div>
+            <div class="uk-background-secondary uk-padding uk-light">Item</div>
+        </div>
+            <div>
+            <div class="uk-background-secondary uk-padding uk-light">Item</div>
+        </div>
+    </div>
+
+    <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
+        <div>
+            <div class="uk-background-muted uk-padding">Item</div>
+        </div>
+        <div>
+            <div class="uk-background-secondary uk-padding uk-light">Item</div>
+        </div>
+        <div>
+            <div class="uk-background-secondary uk-padding uk-light">Item</div>
+        </div>
+    </div>
+
+    <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
+        <div>
+            <div class="uk-background-muted uk-padding">Item</div>
+        </div>
+       
+        <div>
+            <div class="uk-background-secondary uk-padding uk-light">Item</div>
+        </div>
+    </div>
+
+    <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
+        <div>
+            <div class="uk-background-muted uk-padding">Item</div>
+        </div>
+        <div>
+            <div class="uk-background-secondary uk-padding uk-light">Item</div>
+        </div>
+        <div>
+            <div class="uk-background-secondary uk-padding uk-light">Item</div>
+        </div>
+    </div>
+
+</section>
+
+
 
 
 

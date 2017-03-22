@@ -1,15 +1,17 @@
 html, body{width:100%; height:100%; padding:0px; margin:0px}
 
-* { box-sizing:  border-box;}
+* { 
+	box-sizing:  border-box;
+}
 
 body{ 
-	
-	background: tomato;
+	border: 40px white solid;
+	background: gold;
 }
 
 #corps {
 	background: gold;
-	border: 50px white solid;
+	padding: 7em;
 }
 
 .uk-padding {
@@ -22,5 +24,29 @@ body{
 	transform-origin: left top 0;
 	float: right;
 	position: relative;
-	margin: 15em -19em;
+	margin: 15em -15em;
 }
+
+#horizontal-menu {
+	z-index: 1;
+}
+
+#elem {
+	margin : 5em 5em;
+}
+
+/* retrait ombre par défaut autour carte */
+.uk-card-default {
+	box-shadow: none;
+	/*;*/
+}
+
+.mycards .uk-card:nth-child(even) {border: red 2px solid }
+.mycards .uk-card:nth-child(odd) {border: blue 2px solid }
+ 
+
+
+
+
+
+

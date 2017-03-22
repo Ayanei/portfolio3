@@ -13,7 +13,7 @@
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css" />
 <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
-
+<script src="script.js"></script>
 <!-- link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> -->
 <link rel="stylesheet" href="style.css">
 
@@ -22,12 +22,12 @@
 <div class="uk-position-relative">
     
     <div class="uk-position-top">
-        <nav class="uk-navbar-container uk-navbar-transparent " uk-navbar>
+        <nav class="uk-navbar-container uk-navbar-transparent" id="horizontal-menu" uk-navbar>
             <div class="uk-navbar-center">
                 <ul class="uk-navbar-nav">
                     <li class="uk-active"><a href="#">Active</a></li>
                     <li><a href="#">Item</a></li>
-                    <li><a href="#">Item</a></li>
+                    <li><a href="#" id="hide-card">Item coucou</a></li>
                     <li><a href="#">Item</a></li>
                     
                 </ul>
@@ -44,10 +44,8 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li class="uk-active"><a href="#">Active2</a></li>
-                    <li><a href="#">Item2</a></li>
-                    <li><a href="#">Item3</a></li>
-                    <li><a href="#">Item4</a></li>
-                    
+                    <li><a href="#">Bio</a></li>
+                    <li><a href="#">Contact</a></li>                    
                 </ul>
             </div>
         </nav>
@@ -57,7 +55,70 @@
 <section id="corps">
 
 
-    <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
+    <div class="uk-child-width-1-3@m uk-margin mycards" uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title">Fade</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body hide-card">
+                <h3 class="uk-card-title">Fade</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur lol adipiscing elit.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title">Fade</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body hide-card">
+                <h3 class="uk-card-title">Fade</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur mdr adipiscing elit.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title">Fade</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title">Fade</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title">Fade</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title">Fade</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+                <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <h3 class="uk-card-title">Fade</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+  <!--   <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
         <div>
             <div class="uk-background-muted uk-padding">Item</div>
         </div>
@@ -104,11 +165,60 @@
         <div>
             <div class="uk-background-secondary uk-padding uk-light">Item</div>
         </div>
-    </div>
+    </div> -->
 
 </section>
 
 
+
+
+<div id="offcanvas-slide" uk-offcanvas="overlay: true" uk-offcanvas="flip: true">
+    <div class="uk-offcanvas-bar">
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <button class="uk-button uk-button-default uk-offcanvas-close uk-width-1-1 uk-margin" type="button">Close</button>
+
+    </div>
+</div>
+
+<div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <button class="uk-button uk-button-default uk-offcanvas-close uk-width-1-1 uk-margin" type="button">Close</button>
+
+    </div>
+</div>
+
+<div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <button class="uk-button uk-button-default uk-offcanvas-close uk-width-1-1 uk-margin" type="button">Close</button>
+
+    </div>
+</div>
+
+<div id="offcanvas-none" uk-offcanvas="mode: none; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <button class="uk-button uk-button-default uk-offcanvas-close uk-width-1-1 uk-margin" type="button">Close</button>
+
+    </div>
+</div>
 
 
 

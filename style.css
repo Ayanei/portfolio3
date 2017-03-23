@@ -7,11 +7,13 @@ html, body{width:100%; height:100%; padding:0px; margin:0px}
 body{ 
 	border: 40px white solid;
 	background: gold;
+	height:100vh;
 }
 
 #corps {
 	background: gold;
 	padding: 7em;
+		
 }
 
 .uk-padding {

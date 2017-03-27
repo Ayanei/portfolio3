@@ -10,16 +10,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.12/css/uikit.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.12/js/uikit.min.js"></script> -->
 
+<link href="https://fonts.googleapis.com/css?family=Catamaran:100|Noto+Serif" rel="stylesheet">
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css" />
 <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
 <script src="script.js"></script>
 <!-- link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> -->
+<link rel="stylesheet" href="reset.css">
+
 <link rel="stylesheet" href="style.css">
 
 <body> 
 
-<div class="uk-position-relative">
+<!-- <div class="uk-position-relative">
     
     <div class="uk-position-top">
         <nav class="uk-navbar-container uk-navbar-transparent" id="horizontal-menu" uk-navbar>
@@ -27,14 +30,14 @@
                 <ul class="uk-navbar-nav">
                     <li class="uk-active"><a href="#">Active</a></li>
                     <li><a href="#">Item</a></li>
-                    <li><a href="#" id="hide-card">Item coucou</a></li>
+                    <li><a href="#" id="hide-card">Item</a></li>
                     <li><a href="#">Item</a></li>
                     
                 </ul>
             </div>
         </nav>
     </div>
-</div>
+</div> -->
 
 
 <div class="uk-position-relative">
@@ -42,94 +45,36 @@
     <div class="uk-position-top">
         <nav class="uk-navbar-container uk-navbar-transparent" id="vertical-menu" uk-navbar>
             <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="#">Active2</a></li>
-                    <li><a href="#">Bio</a></li>
-                    <li><a href="#">Contact</a></li>                    
+                <ul class="uk-navbar-nav" >
+                    <li id="portfolio-link" class="uk-active"><a href="#">Portfolio</a></li>
+                    <li><a uk-toggle="target: .toggle ; target : #offcanvas-slide" href="#">Contact</a></li>
+                    <li><a id="bio-link" href="#">Bio</a></li>                    
                 </ul>
             </div>
         </nav>
     </div>
+
+
 </div>
 
-<section id="corps">
+<section id="cors">
 
 
-    <div class="uk-child-width-1-3@m uk-margin mycards" uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
+    <div class="uk-child-width-1-3@m uk-margin" id="portfolio" uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 100; repeat: true">
         <div>
-            <div class="uk-card uk-card-default uk-card-body">
-                <h3 class="uk-card-title">Fade</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="uk-card uk-card-default uk-card-body uk-transition-toggle uk-light hide-card" href="#modal-full-lol" uk-toggle>
+                <div class="uk-position-center">
+                        <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">Réalisation d'entreprise</h4></div>
+                        <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">Drupal site</h4></div>
+                </div>
+
+                <div id="modal-full-lol" class="uk-modal-full" uk-modal>
                     <div class="uk-modal-dialog">
                         <button class="uk-modal-close-full" type="button" uk-close></button>
                         <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
                             <div class="uk-background-cover" style="background-image: url('http://www.horizon-virtuel.com/europe/suede/hiver-suede.jpg');" uk-height-viewport></div>
                             <div class="uk-padding-large">
-                                <h1>Headline</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-                <!-- fin modal -->
-
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body hide-card">
-                <h3 class="uk-card-title">Fade</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur lol adipiscing elit.</p>
-
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body">
-                <h3 class="uk-card-title">Fade</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body hide-card">
-                <h3 class="uk-card-title">Fade</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur mdr adipiscing elit.</p>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body">
-                <h3 class="uk-card-title">Fade</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body">
-                <h3 class="uk-card-title">Fade</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-             <div>
-            <div class="uk-card uk-card-default uk-card-body hide-card">
-                <h3 class="uk-card-title">Fade</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur mdr adipiscing elit.</p>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body">
-                <h3 class="uk-card-title">Fade</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body" href="#modal-full" uk-toggle>
-                <h3 class="uk-card-title">Fade</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <div id="modal-full" class="uk-modal-full" uk-modal>
-                    <div class="uk-modal-dialog">
-                        <button class="uk-modal-close-full" type="button" uk-close></button>
-                        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
-                            <div class="uk-background-cover" style="background-image: url('http://www.horizon-virtuel.com/europe/suede/hiver-suede.jpg');" uk-height-viewport></div>
-                            <div class="uk-padding-large">
-                                <h1>Headline</h1>
+                                <h1>Salut</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing eit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate vlit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                         </div>
@@ -139,18 +84,21 @@
 
             </div>
         </div>
-        <div>
-            <div class="uk-card uk-card-default uk-card-body" href="#modal-full-une" uk-toggle>
-                <h3 class="uk-card-title">Fade</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-                <div id="modal-full-une" class="uk-modal-full" uk-modal>
+         <div>
+            <div class="uk-card uk-card-default uk-card-body uk-transition-toggle uk-light hide-card" href="#modal-full-lol" uk-toggle>
+                <div class="uk-position-center">
+                        <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">Réalisation d'entreprise</h4></div>
+                        <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">Drupal site</h4></div>
+                </div>
+
+                <div id="modal-full-lol" class="uk-modal-full" uk-modal>
                     <div class="uk-modal-dialog">
                         <button class="uk-modal-close-full" type="button" uk-close></button>
                         <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
                             <div class="uk-background-cover" style="background-image: url('http://www.horizon-virtuel.com/europe/suede/hiver-suede.jpg');" uk-height-viewport></div>
                             <div class="uk-padding-large">
-                                <h1>Headline</h1>
+                                <h1>Salut</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing eit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate vlit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                         </div>
@@ -160,119 +108,202 @@
 
             </div>
         </div>
-  
+
+         <div>
+            <div class="uk-card uk-card-default uk-card-body uk-transition-toggle uk-light hide-card" href="#modal-full-lol" uk-toggle>
+                <div class="uk-position-center">
+                        <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">Réalisation d'entreprise</h4></div>
+                        <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">Drupal site</h4></div>
+                </div>
+
+                <div id="modal-full-lol" class="uk-modal-full" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-full" type="button" uk-close></button>
+                        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                            <div class="uk-background-cover" style="background-image: url('http://www.horizon-virtuel.com/europe/suede/hiver-suede.jpg');" uk-height-viewport></div>
+                            <div class="uk-padding-large">
+                                <h1>Salut</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing eit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate vlit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- fin modal -->
+
+            </div>
+        </div>
+
+        <div>
+            <div class="uk-card uk-card-default uk-card-body uk-transition-toggle uk-light hide-card" href="#modal-full-lol" uk-toggle>
+                <div class="uk-position-center">
+                        <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">Réalisation d'entreprise</h4></div>
+                        <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">Drupal site</h4></div>
+                </div>
+
+                <div id="modal-full-lol" class="uk-modal-full" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-full" type="button" uk-close></button>
+                        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                            <div class="uk-background-cover" style="background-image: url('http://www.horizon-virtuel.com/europe/suede/hiver-suede.jpg');" uk-height-viewport></div>
+                            <div class="uk-padding-large">
+                                <h1>Salut</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing eit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate vlit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- fin modal -->
+
+            </div>
+        </div>
+
+         <div>
+            <div class="uk-card uk-card-default uk-card-body uk-transition-toggle uk-light hide-card" href="#modal-full-lol" uk-toggle>
+                <div class="uk-position-center">
+                        <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">Réalisation d'entreprise</h4></div>
+                        <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">Drupal site</h4></div>
+                </div>
+
+                <div id="modal-full-lol" class="uk-modal-full" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-full" type="button" uk-close></button>
+                        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                            <div class="uk-background-cover" style="background-image: url('http://www.horizon-virtuel.com/europe/suede/hiver-suede.jpg');" uk-height-viewport></div>
+                            <div class="uk-padding-large">
+                                <h1>Salut</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing eit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate vlit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- fin modal -->
+
+            </div>
+        </div>
+
+         <div>
+            <div class="uk-card uk-card-default uk-card-body uk-transition-toggle uk-dark hide-card" href="#modal-full-lol" uk-toggle>
+                <div class="uk-position-center">
+                        <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">Réalisation d'entreprise</h4></div>
+                        <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">Drupal site</h4></div>
+                </div>
+
+                <div id="modal-full-lol" class="uk-modal-full" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-full" type="button" uk-close></button>
+                        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                            <div class="uk-background-cover" style="background-image: url('http://www.horizon-virtuel.com/europe/suede/hiver-suede.jpg');" uk-height-viewport></div>
+                            <div class="uk-padding-large">
+                                <h1>Salut</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing eit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate vlit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- fin modal -->
+
+            </div>
+        </div>      
 
     </div>
+<!-- 
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-slide">Slide</button>
+ -->
 
+</section>
 
+<section id="bio">
+    
+    <article class="uk-article">
 
+    <h1 class="uk-article-title"><a class="uk-link-reset" href="">Heading</a></h1>
 
+    <p class="uk-article-meta">Written by <a href="#">Super User</a> on 12 April 2012. Posted in <a href="#">Blog</a></p>
 
+    <p class="uk-text-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
 
-  <!--   <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div class="uk-grid-small uk-child-width-auto" uk-grid>
         <div>
-            <div class="uk-background-muted uk-padding">Item</div>
+            <a class="uk-button uk-button-text" href="#">Read more</a>
         </div>
         <div>
-            <div class="uk-background-secondary uk-padding uk-light">Item</div>
-        </div>
-        <div>
-            <div class="uk-background-secondary uk-padding uk-light">Item</div>
-        </div>
-            <div>
-            <div class="uk-background-secondary uk-padding uk-light">Item</div>
+            <a class="uk-button uk-button-text" href="#">5 Comments</a>
         </div>
     </div>
 
-    <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
-        <div>
-            <div class="uk-background-muted uk-padding">Item</div>
-        </div>
-        <div>
-            <div class="uk-background-secondary uk-padding uk-light">Item</div>
-        </div>
-        <div>
-            <div class="uk-background-secondary uk-padding uk-light">Item</div>
-        </div>
-    </div>
-
-    <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
-        <div>
-            <div class="uk-background-muted uk-padding">Item</div>
-        </div>
-       
-        <div>
-            <div class="uk-background-secondary uk-padding uk-light">Item</div>
-        </div>
-    </div>
-
-    <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
-        <div>
-            <div class="uk-background-muted uk-padding">Item</div>
-        </div>
-        <div>
-            <div class="uk-background-secondary uk-padding uk-light">Item</div>
-        </div>
-        <div>
-            <div class="uk-background-secondary uk-padding uk-light">Item</div>
-        </div>
-    </div> -->
+</article>
 
 </section>
 
 
 
-
-<div id="offcanvas-slide" uk-offcanvas="overlay: true" uk-offcanvas="flip: true">
+<div id="offcanvas-slide" uk-offcanvas="flip : true ; overlay : true">
     <div class="uk-offcanvas-bar">
 
         <h3>Title</h3>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-        <button class="uk-button uk-button-default uk-offcanvas-close uk-width-1-1 uk-margin" type="button">Close</button>
+        <form>
+            <fieldset class="uk-fieldset">
 
-    </div>
-</div>
+                <legend class="uk-legend">Legend</legend>
 
-<div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
-    <div class="uk-offcanvas-bar">
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" placeholder="Input">
+                </div>
 
-        <h3>Title</h3>
+                <div class="uk-margin">
+                    <select class="uk-select">
+                        <option>Option 01</option>
+                        <option>Option 02</option>
+                    </select>
+                </div>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="uk-margin">
+                    <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+                </div>
 
-        <button class="uk-button uk-button-default uk-offcanvas-close uk-width-1-1 uk-margin" type="button">Close</button>
+                <div class="uk-margin uk-grid-small uk-child-width-auto" uk-grid>
+                    <label><input class="uk-radio" type="radio" name="radio2" checked> A</label>
+                    <label><input class="uk-radio" type="radio" name="radio2"> B</label>
+                </div>
 
-    </div>
-</div>
+                <div class="uk-margin uk-grid-small uk-child-width-auto" uk-grid>
+                    <label><input class="uk-checkbox" type="checkbox" checked> A</label>
+                    <label><input class="uk-checkbox" type="checkbox"> B</label>
+                </div>
 
-<div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
-    <div class="uk-offcanvas-bar">
-
-        <h3>Title</h3>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-        <button class="uk-button uk-button-default uk-offcanvas-close uk-width-1-1 uk-margin" type="button">Close</button>
-
-    </div>
-</div>
-
-<div id="offcanvas-none" uk-offcanvas="mode: none; overlay: true">
-    <div class="uk-offcanvas-bar">
-
-        <h3>Title</h3>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </fieldset>
+        </form>
 
         <button class="uk-button uk-button-default uk-offcanvas-close uk-width-1-1 uk-margin" type="button">Close</button>
 
     </div>
 </div>
+
 
 
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
